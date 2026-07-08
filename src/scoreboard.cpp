@@ -9,12 +9,12 @@ int calculateTotal(const int scores[], int size) {
     // Otherwise, return the sum of all scores.
 
     if (!isValidSize(size)){
-    return 0;
-}
+        return 0;
+    }
     int total = 0;
     for (int i = 0; i < size; i++) {
         total += scores [i];
-}
+    }
     return total;
 }
 

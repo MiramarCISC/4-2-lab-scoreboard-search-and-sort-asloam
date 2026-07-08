@@ -106,6 +106,7 @@ void sortScores(int scores[], int size) {
 
 void printScores(const int scores[], int size) {
     if (scores == nullptr || !isValidSize(size)) {
+        cout << "No scores to print." << endl;
         return;
     }
 

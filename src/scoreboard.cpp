@@ -24,8 +24,8 @@ double calculateAverage(const int scores[], int size) {
     // Otherwise, return the total divided by size.
 
     if (!isValidSize(size)) {
-    return 0.0;
-}
+        return 0.0;
+    }
     int total = calculateTotal (scores, size);
     return static_cast<double>(total) / size;
 }

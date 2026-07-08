@@ -51,16 +51,16 @@ int findHighest(const int scores[], int size) {
     // If the array is null or the size is invalid, return 0.
     // Otherwise, return the largest score.
     
-if (!isValidSize(size))   { 
-    return 0;
-}
+    if (!isValidSize(size)) { 
+        return 0;
+    }
 
-int highest = scores[0];
+    int highest = scores[0];
 
-for (int i = 1; i < size; i++) {
-    if (scores[i] > highest) {
-        highest = scores[i];
-     }
+    for (int i = 1; i < size; i++) {
+        if (scores[i] > highest) {
+            highest = scores[i];
+        }
     }
     return highest;
 }

@@ -36,15 +36,15 @@ int findLowest(const int scores[], int size) {
     // Otherwise, return the smallest score.
     
     if (!isValidSize(size)) {
-    return 0;
-}
+        return 0;
+    }
     int lowest = scores[0];
     for (int i=1; i < size; i++) {
         if (scores[i] < lowest) {
             lowest = scores[i];}
         }
         return lowest;
-    }
+}
 
 int findHighest(const int scores[], int size) {
     // TODO:

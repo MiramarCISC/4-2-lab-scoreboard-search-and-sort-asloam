@@ -8,7 +8,7 @@ int calculateTotal(const int scores[], int size) {
     // If the array is null or the size is invalid, return 0.
     // Otherwise, return the sum of all scores.
 
-    if (!isValidSize(size)){
+    if (scores == nullptr || !isValidSize(size)){
         return 0;
     }
     int total = 0;
@@ -23,10 +23,10 @@ double calculateAverage(const int scores[], int size) {
     // If the array is null or the size is invalid, return 0.0.
     // Otherwise, return the total divided by size.
 
-    if (!isValidSize(size)) {
+    if (scores == nullptr || !isValidSize(size)) {
         return 0.0;
     }
-    
+
     double total = calculateTotal (scores, size);
     return (total / size);
 }
@@ -36,7 +36,7 @@ int findLowest(const int scores[], int size) {
     // If the array is null or the size is invalid, return 0.
     // Otherwise, return the smallest score.
     
-    if (!isValidSize(size)) {
+    if (scores == nullptr || !isValidSize(size)) {
         return 0;
     }
     int lowest = scores[0];
@@ -52,7 +52,7 @@ int findHighest(const int scores[], int size) {
     // If the array is null or the size is invalid, return 0.
     // Otherwise, return the largest score.
     
-    if (!isValidSize(size)) { 
+    if (scores == nullptr || !isValidSize(size)) { 
         return 0;
     }
 
@@ -72,7 +72,7 @@ int findScore(const int scores[], int size, int target) {
     // Return the index where target is found.
     // Return -1 when target is not found.
 
-    if (!isValidSize(size)) {
+    if (scores == nullptr || !isValidSize(size)) {
         return -1;
     }
 
@@ -90,7 +90,7 @@ void sortScores(int scores[], int size) {
     // Sort the array from lowest to highest.
     // A selection sort works well for this lab.
 
-    if (!isValidSize(size)) {
+    if (scores == nullptr || !isValidSize(size)) {
         return;
     }
 
@@ -111,7 +111,7 @@ void sortScores(int scores[], int size) {
 
 
 void printScores(const int scores[], int size) {
-    if (!isValidSize(size)) {
+    if (scores == nullptr || !isValidSize(size)) {
         return;
     }
 

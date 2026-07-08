@@ -72,12 +72,12 @@ int findScore(const int scores[], int size, int target) {
     // Return -1 when target is not found.
 
     if (!isValidSize(size)) {
-    return -1;
-}
+        return -1;
+    }
 
     for (int i = 0; i < size; i++) {
-    if (scores[i] == target) {
-        return i;
+        if (scores[i] == target) {
+            return i;
         }
     }
 

@@ -89,22 +89,22 @@ void sortScores(int scores[], int size) {
     // Sort the array from lowest to highest.
     // A selection sort works well for this lab.
 
-if (!isValidSize(size)) {
-    return;
-}
-
-for (int start = 0; start < size -1; start++) {
-    int minindex = start;
-
-    for (int i = start + 1; i < size; i++) {
-        if (scores[i] < scores[minindex]) {
-            minindex = i;
-        }
+    if (!isValidSize(size)) {
+        return;
     }
 
-    int temp = scores[start];
-    scores[start] = scores[minindex];
-    scores[minindex] = temp;
+    for (int start = 0; start < size -1; start++) {
+        int minindex = start;
+
+        for (int i = start + 1; i < size; i++) {
+            if (scores[i] < scores[minindex]) {
+                minindex = i;
+            }
+        }
+
+        int temp = scores[start];
+        scores[start] = scores[minindex];
+        scores[minindex] = temp;
     }
 }
 

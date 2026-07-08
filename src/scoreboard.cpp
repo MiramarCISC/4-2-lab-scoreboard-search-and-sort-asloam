@@ -26,8 +26,9 @@ double calculateAverage(const int scores[], int size) {
     if (!isValidSize(size)) {
         return 0.0;
     }
-    int total = calculateTotal (scores, size);
-    return static_cast<double>(total) / size;
+    
+    double total = calculateTotal (scores, size);
+    return (total / size);
 }
 
 int findLowest(const int scores[], int size) {
